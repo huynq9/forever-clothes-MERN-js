@@ -10,10 +10,12 @@ import PlaceOder from "./pages/PlaceOder";
 import Navbar from "./components/Navbar";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
+import SearchBar from "./components/SearchBar";
 const App = () => {
   return (
     <div className="px-4 sm:px-[5vh] md:px-[7vh] lg:px-[9vh]">
       <Navbar />
+      <SearchBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Collection />} />
