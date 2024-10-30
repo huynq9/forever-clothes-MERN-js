@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 const ProductItem = ({ id, image, name, price }) => {
   const { currency } = useContext(ShopContext);
-  console.log(currency);
 
   return (
     <Link className="text-gray-700 cursor-pointer" to={`/product/${id}`}>
