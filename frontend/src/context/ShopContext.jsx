@@ -21,9 +21,11 @@ const ShopContextProvider = (props) => {
     if (cartData[itemId]) {
       if (cartData[itemId][size]) {
         cartData[itemId][size] += 1;
+
         toast.success("Product added to cart");
       } else {
         cartData[itemId][size] = 1;
+
         toast.success("Product added to cart");
       }
     } else {
@@ -42,7 +44,9 @@ const ShopContextProvider = (props) => {
           if (cartItems[items][item] > 0) {
             totalCount += cartItems[items][item];
           }
-        } catch (error) {}
+        } catch (error) {
+          toast.error(error);
+        }
       }
     }
     return totalCount;
